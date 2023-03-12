@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery-3.6.3.min.js"></script> 
+    <!-- pemanggilan library jquery -->
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+        // berfungsi untuk menjalankan ketika halaman sudah siap
+
+            $(".sembunyi").click(function() {$("#foto").hide("slow")});
+            /* function untuk button sembunyikan yang apabila diklik akan 
+            menyembunyikan foto dengan transisi menutup perlahan/slow */
+
+            $(".tampil").click(function() {$("#foto").show("slow")});
+            /* function untuk button tampilkan yang apabila diklik akan 
+            menampilkan foto dengan transisi muncul perlahan/slow */
+        })
+    </script>
+</head>
+<body>
+    <button class="sembunyi">Sembunyikan</button>
+    <button class="tampil">Tampilkan</button>
+    <p><img id="foto" src="myphoto.png"></p>
+</body>
+</html>

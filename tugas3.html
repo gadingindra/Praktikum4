@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Efek Fade</title>
+    <script src="jquery-3.6.3.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        // berfungsi untuk menjalankan ketika halaman sudah siap
+            $("#fadeout").click(function() {$(".kotak").fadeOut("slow")});
+            // untuk id fadeout ketika diklik maka kotak akan menghilang secara perlahan
+            $("#fadein").click(function() {$(".kotak").fadeTo("slow", 1)});
+            // untuk id fadein ketika diklik maka kotak akan muncul normal
+            // dibuat fadeTo 1 yang mana artinya kotak dalam posisi normal
+            $("#fadeto03").click(function() {$(".kotak").fadeTo("slow", 0.3)});
+            // untuk id fadeto03 ketika diklik maka kotak akan memudar 0.3x dari semula
+        })
+    </script>
+    <style type="text/css">
+        .kotak {
+            height: 200px;
+            width: 200px;
+            background-color:yellow;
+        }
+    </style>
+</head>
+<body>
+    <p class="kotak"></p>
+    <input id="fadeout" type="button" value="Fade Out">
+    <input id="fadein" type="button" value="Fade In">
+    <input id="fadeto03" type="button" value="Fade to 0.3">
+</body>
+</html>

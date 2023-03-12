@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ubah Warna Event Click</title>
+    <script src="jquery-3.6.3.min.js"></script>
+    <script type="text/javascript">
+        function getRandomColor() {
+        // function untuk generate random warna
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        $(document).ready(function () {
+        // menunggu halaman selesai di-load
+            $(".kotak").dblclick(function () {
+            // function untuk aksi ketika kotak warna diklik 2x
+                $(this).css("background-color", getRandomColor()); 
+                // untuk mengubah warna kotak menjadi warna random
+            });
+        });
+    </script>
+    <style type="text/css">
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-gap: 50px;
+        }
+        .kotak {
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Klik 2x pada kotak untuk mengubah warna</h1>
+    <div class="container">
+      <div class="kotak"></div>
+      <div class="kotak"></div>
+      <div class="kotak"></div>
+      <div class="kotak"></div>
+    </div>
+</body>
+</html>

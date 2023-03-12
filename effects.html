@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+</html>
+<html>
+<head>
+    <title>Efek JS</title>
+    <script src="jquery-3.6.3.min.js"></script>
+    <!-- pemanggilan library jquery -->
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+        // berfungsi untuk menjalankan ketika halaman sudah siap
+
+            setTimeout(function() {
+            // function mengatur waktu hilang setelah 3 detik
+                $("#kotak").fadeOut("slow",function() {
+                    $("#kotak").remove();
+                    /* function untuk membuat id kotak akan perlahan memudar 
+                    kemudian dihapus atau menghilang */
+                });
+            }, 3000);
+        });
+    </script>
+    <style type="text/css">
+        #kotak {
+            width: 350px;
+            height: 50px;
+            background: lightyellow;
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h3 id="kotak">
+        Perhatikan baik-baik teks ini, karena
+        teks akan hilang dalam hitungan 3 detik
+    </h3>
+</body>
+</html>

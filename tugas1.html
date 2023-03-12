@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery-3.6.3.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        // berfungsi untuk menjalankan ketika halaman sudah siap
+
+            $(".sembunyi1").click(function() {$("#foto1").hide("fast")});
+            // untuk menyembunyikan foto 1 ketika button sembunyikan pertama diklik
+            $(".tampil1").click(function() {$("#foto1").show("fast")});
+            // untuk menampilkan foto 1 ketika button tampilkan pertama diklik
+            $(".sembunyi2").click(function() {$("#foto2").hide("fast")});
+            // untuk menyembunyikan foto 2 ketika button sembunyikan kedua diklik
+            $(".tampil2").click(function() {$("#foto2").show("fast")});
+            // untuk menampilkan foto 2 ketika button tampilkan kedua diklik
+        })
+    </script>
+    <style type="text/css">
+        #foto1 {
+            height: 300px;
+        }
+        #foto2 {
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <button class="sembunyi1">Sembunyikan</button>
+    <button class="tampil1">Tampilkan</button>
+    <p><img id="foto1" src="myphoto.png"></p>
+    <button class="sembunyi2">Sembunyikan</button>
+    <button class="tampil2">Tampilkan</button>
+    <p><img id="foto2" src="user.png"></p>
+</body>
+</html>
